@@ -42,8 +42,6 @@ for (k,v) in model_dirs.items():
 		if f.endswith('.json'):
 			#fn = os.path.join(exampledir, f)
 			fn = path
-			print("-"*120)
-			print("Processing: %s" % fn)
 			fh = open(fn)
 			data = json.load(fh)
 			fh.close()
@@ -52,6 +50,7 @@ for (k,v) in model_dirs.items():
 			for error in v.iter_errors(data):
 				errs.append(error)
 				# 	print(error.absolute_schema_path) <-- this is the current path through the schema 
+				print("-"*120)
+                        	#print("Processing: %s" % fn)
+				print("Processing: %s" % fn)
 				print(f"  /{'/'.join([str(x) for x in error.absolute_path])} --> {error.message} ")
-			if not errs:
-				print("  Validated!")
