@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/schema#",
-	"$id": "file:///Users/ermadmix/documents/github_clones/json-validator/schema/",
+	"$id": "file:///home/ec2-user/json-validator/schema/",
 	"title": "Person Schema",
 	"description": "_crm:E21\\_Person_\nA human.\nSee: [API](https://linked.art/api/1.0/endpoint/person/) | [Model](https://linked.art/model/actor/)",	
 	"type": "object",

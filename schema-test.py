@@ -24,18 +24,21 @@ model_dirs = {
 	"visual": "image"
 }
 
-base_instance_dir = "/Users/ermadmix/documents/github_clones/reconciliation/data/ycba/linked_art"
+base_instance_dir = "/home/ec2-user/reconciliation/data/ycba/linked_art/activity"
+
 schema_dir = "schema"
 
 for (k,v) in model_dirs.items():
 
 	schemafn = os.path.join(schema_dir, f"{v}.json")
+	print(f"schemafn:{schemafn}")
 	fh = open(schemafn)
 	schema = json.load(fh)
 	fh.close()
 	v = Draft7Validator(schema)
 
-	exampledir = os.path.join(base_instance_dir, k)
+	#exampledir = os.path.join(base_instance_dir, k)
+	exampledir = os.path.join(base_instance_dir)
 	for path in Path(exampledir).rglob('*.json'):
 		f = str(path)
 		

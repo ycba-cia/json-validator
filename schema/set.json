@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/schema#",
-	"$id": "file:///Users/ermadmix/documents/github_clones/json-validator/schema/",
+	"$id": "file:///home/ec2-user/json-validator/schema/",
 	"title": "Collection Schema",
 	"description": "_la:Set_\nA collection of other resources, such as a set of objects or places.\n[API](https://linked.art/api/1.0/endpoint/set/) | [Model](https://linked.art/model/collection/)",
 	"type": "object",

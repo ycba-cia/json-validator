@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/schema#",
-	"$id": "file:///Users/ermadmix/documents/github_clones/json-validator/schema/",
+	"$id": "file:///home/ec2-user/json-validator/schema/",
 	"title": "Event Schema",
 	"description": "_crm:E6\\_Event_ or _crm:E7\\_Activity_\nAn event (no person carried it out) or activity (some actor was responsible) that occured.\nSee: [API](https://linked.art/api/1.0/endpoint/event/) | [Model]()",
 	"type": "object",
