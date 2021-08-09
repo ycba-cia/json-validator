@@ -25,9 +25,9 @@ model_dirs = {
 }
 
 
-base_instance_dir = "/home/ec2-user/reconciliation/data/ycba/linked_art/activity"
+base_instance_dir = "/home/ec2-user/reconciliation/data/ycba/linked_art/digital"
 
-schema_dir = "schema/event.json"
+schema_dir = "schema/digital.json"
 
 schemafn = os.path.join(schema_dir)
 fh = open(schemafn)
@@ -35,9 +35,11 @@ schema = json.load(fh)
 fh.close()
 v = Draft7Validator(schema)
 exampledir = os.path.join(base_instance_dir)
+count = 0
 for path in Path(exampledir).rglob('*.json'):
 	f = str(path)
 	if f.endswith('.json'):
+		count += 1
 		fn = path
 		fh = open(fn)
 		data = json.load(fh)
@@ -46,3 +48,4 @@ for path in Path(exampledir).rglob('*.json'):
 			print("-"*120)
 			print("Error: %s" % fn)
 			print(f"  /{'/'.join([str(x) for x in error.absolute_path])} --> {error.message} ")
+print(f"total count {count}")
