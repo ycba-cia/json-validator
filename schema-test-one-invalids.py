@@ -2,6 +2,7 @@
 import json
 import jsonschema
 import os
+import sys
 
 from jsonschema import validate, Draft7Validator
 from jsonschema.exceptions import ValidationError
@@ -25,9 +26,9 @@ model_dirs = {
 }
 
 
-base_instance_dir = "/home/ec2-user/reconciliation/data/ycba/linked_art/digital"
+base_instance_dir = "/home/ec2-user/reconciliation/data/ycba/linked_art/{}".format(sys.argv[1])
 
-schema_dir = "schema/digital.json"
+schema_dir = "schema/{}.json".format(sys.argv[2])
 
 schemafn = os.path.join(schema_dir)
 fh = open(schemafn)
@@ -39,6 +40,7 @@ count = 0
 for path in Path(exampledir).rglob('*.json'):
 	f = str(path)
 	if f.endswith('.json'):
+		#print(f)
 		count += 1
 		fn = path
 		fh = open(fn)
