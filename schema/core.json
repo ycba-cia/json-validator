@@ -56,7 +56,7 @@
             "title": "crm:P67i_is_referred_to_by",
             "description": "An embedded statement about this entity, or a reference to a text that refers to the entity",
             "type": "array",
-            "items": {
+	    "items": {
                 "$ref": "#/definitions/LingObjOrDigitalObjOrStatement"
             }
         },
@@ -201,6 +201,14 @@
             "type": "array",
             "items": {
                 "$ref": "#/definitions/PlaceRef"
+            }
+        },
+	"participated_inProp": {
+            "title": "crm:P11i_participated_in",
+            "description": "A `Place` where this entity has participated in an activity",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Activity"
             }
         },
         "dimensionProp": {
@@ -1327,7 +1335,8 @@
                 },
                 "_label": {
                     "$ref": "#/definitions/labelProp"
-                }
+                },
+		"digitally_carried_by": {"title": "la:digitally_carried_by", "description": "", "type": "array", "items": {"$ref": "core.json#/definitions/DigitalObjectRef"}}
             },
             "required": [
                 "id",

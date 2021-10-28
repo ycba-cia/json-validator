@@ -24,6 +24,8 @@
 		"contact_point": {"$ref": "core.json#/definitions/contact_pointProp"},
 		"residence": {"$ref": "core.json#/definitions/residenceProp"},
 
+		"participated_in": {"$ref": "core.json#/definitions/participated_inProp"},
+
 		"born": {
 			"title": "crm:P98i_was_born",
 			"description": "The event in which this Person was born", 
