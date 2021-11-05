@@ -54,3 +54,8 @@ for (k,v) in model_dirs.items():
                         	#print("Processing: %s" % fn)
 				print("Processing: %s" % fn)
 				print(f"  /{'/'.join([str(x) for x in error.absolute_path])} --> {error.message} ")
+				print(error.validator)
+				print(error.validator_value)
+				print(error.schema)
+				for suberror in sorted(error.context, key=lambda e: e.schema_path):
+        				print(list(suberror.schema_path), suberror.message, sep=", ")
