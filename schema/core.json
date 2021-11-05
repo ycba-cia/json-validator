@@ -203,6 +203,14 @@
                 "$ref": "#/definitions/PlaceRef"
             }
         },
+	"participated_inProp": {
+            "title": "crm:P11i_participated_in",
+            "description": "A `Place` where this entity has participated in an activity",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Activity"
+            }
+        },
         "dimensionProp": {
             "title": "crm:P43_has_dimension",
             "description": "One or more `Dimension` structures that describe this entity",
@@ -1328,6 +1336,7 @@
                 "_label": {
                     "$ref": "#/definitions/labelProp"
                 }
+		"digitally_carried_by": {"title": "la:digitally_carried_by", "description": "", "type": "array", "items": {"$ref": "core.json#/definitions/DigitalObjectRef"}}
             },
             "required": [
                 "id",
