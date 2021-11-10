@@ -1335,7 +1335,7 @@
                 },
                 "_label": {
                     "$ref": "#/definitions/labelProp"
-                }
+                },
 		"digitally_carried_by": {"title": "la:digitally_carried_by", "description": "", "type": "array", "items": {"$ref": "core.json#/definitions/DigitalObjectRef"}}
             },
             "required": [
